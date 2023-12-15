@@ -1,4 +1,5 @@
 import os
+import signal
 import sys
 import psutil
 import time
@@ -22,6 +23,10 @@ class MyDaemon(DaemonContext):
                 else:
                     print("Process 'spt' is not running! Restarting...")
                     break
+        print("killing.....", os.getpid())
+        time.sleep(2)
+        os.kill(os.getpid(), signal.SIGTERM)
+        return
                 
     def stop(self):
         print("Stopping MyDaemon...")
