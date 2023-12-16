@@ -12,9 +12,6 @@ class MyDaemon(DaemonContext):
     def start(self):
         # Your daemon logic goes here
         print("My daemon is running...", os.getpid())
-        # for process in psutil.process_iter():
-        #     if process.name() == "spt":
-        #         print(process.name(), process.status())
         for process in psutil.process_iter():
             if process.name() == "spt":
                 # Check process status and perform actions
@@ -35,7 +32,7 @@ class MyDaemon(DaemonContext):
             if process.name() == "your_process_name":
                 process.terminate()
         # Optionally: remove PID file
-        # os.remove(self.pidfile)
+        os.remove(self.pidfile)
 
     def restart(self):
         print("Restarting MyDaemon...")
