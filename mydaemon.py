@@ -40,7 +40,6 @@ class MyDaemon(DaemonContext):
         self.start()
     
     def stop(self):
-        # os.remove(pidfile)
         pass
 
 
