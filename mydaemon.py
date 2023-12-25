@@ -42,7 +42,6 @@ class MyDaemon(DaemonContext):
     def stop(self):
         pass
 
-
 if __name__ == "__main__":
     pidfile = "./mydaemon.pid"
     daemon = MyDaemon(pidfile)
