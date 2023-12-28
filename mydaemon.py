@@ -39,8 +39,8 @@ class MyDaemon(DaemonContext):
         self.stop()
         self.start()
     
-    def stop(self):
-        pass
+    # def stop(self):
+    #     pass
 
 if __name__ == "__main__":
     pidfile = "./mydaemon.pid"
