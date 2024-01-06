@@ -40,7 +40,8 @@ class MyDaemon(DaemonContext):
         self.start()
     
     def stop(self):
-        pass
+        print("Stoping MyDaemon...")
+        self.stop()
 
 # main class for the program
 if __name__ == "__main__":
