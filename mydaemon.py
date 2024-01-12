@@ -40,7 +40,6 @@ class MyDaemon(DaemonContext):
         self.start()
     
     def stop(self):
-        print("Stopping MyDaemon...")
         self.stop()
 
 # main class for the program
