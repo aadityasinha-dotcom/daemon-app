@@ -41,9 +41,6 @@ class MyDaemon(DaemonContext):
     
     def stop(self):
         print("Stopping MyDaemon...")
-        for process in psutil.process_iter():
-            if process.name() == "your_process_name":
-                process.terminate()
         self.stop()
 
 # main class for the program
