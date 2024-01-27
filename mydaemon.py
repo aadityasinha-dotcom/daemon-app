@@ -41,8 +41,6 @@ class MyDaemon(DaemonContext):
     
     def stop(self):
         print("Stopping MyDaemon...")
-        # Optionally: remove PID file
-        os.remove(self.pidfile)
         self.stop()
 
 # main class for the program
