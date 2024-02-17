@@ -38,14 +38,6 @@ class MyDaemon(DaemonContext):
         print("Restarting MyDaemon...")
         self.stop()
         self.start()
-    
-    def stop(self):
-        # Terminate any running processes
-        for process in psutil.process_iter():
-            if process.name() == "your_process_name":
-                process.terminate()
-        print("Stopping MyDaemon...")
-        self.stop()
 
 # main class for the program
 if __name__ == "__main__":
