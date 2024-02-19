@@ -37,7 +37,6 @@ class MyDaemon(DaemonContext):
     def restart(self):
         print("Restarting MyDaemon...")
         self.stop()
-        self.start()
 
 # main class for the program
 if __name__ == "__main__":
