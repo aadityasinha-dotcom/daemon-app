@@ -38,6 +38,11 @@ class MyDaemon(DaemonContext):
         print("Restarting MyDaemon...")
         self.stop()
 
+    def stop(self):
+        print("Stopping MyDaemon...")
+        # Optionally: remove PID file
+        os.remove(self.pidfile)
+
 # main class for the program
 if __name__ == "__main__":
     pidfile = "./mydaemon.pid"
